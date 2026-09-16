@@ -516,7 +516,7 @@ h3 {
   gap: 0.5rem;
 }
 
-/* Responsive Styles */
+/* Responsive Navigation & Mobile Layout */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -562,8 +562,9 @@ h3 {
   .top-bar-links a {
     margin-left: 0;
   }
-  }
-  /* ==========================================================================
+}
+
+/* ==========================================================================
    Parallax Background & Glassmorphic Card Styles
    ========================================================================== */
 
@@ -580,13 +581,11 @@ h3 {
 
 /* Background image variants */
 .bg-domestic {
-  /* High-resolution modern eco/residential home */
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') !important;
 }
 
 .bg-commercial {
-  /* High-resolution contemporary architectural glass commercial office */
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') !important;
 }
 
 /* Darkening overlay so white text remains accessible and readable */
@@ -597,7 +596,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.65); /* Deep slate tint */
+  background: rgba(15, 23, 42, 0.65);
   z-index: 1;
 }
 
