@@ -562,6 +562,7 @@ h3 {
   .top-bar-links a {
     margin-left: 0;
   }
+  }
   /* ==========================================================================
    Parallax Background & Glassmorphic Card Styles
    ========================================================================== */
@@ -574,7 +575,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem 0;
-  background-colour: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Background image variants */
