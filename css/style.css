@@ -574,6 +574,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem 0;
+  background-colour: transparent !important;
 }
 
 /* Background image variants */
