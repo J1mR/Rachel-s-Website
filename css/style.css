@@ -562,4 +562,80 @@ h3 {
   .top-bar-links a {
     margin-left: 0;
   }
+  /* ==========================================================================
+   Parallax Background & Glassmorphic Card Styles
+   ========================================================================== */
+
+/* Fixed photographic background containers */
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+/* Background image variants */
+.bg-domestic {
+  /* High-resolution modern eco/residential home */
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+}
+
+.bg-commercial {
+  /* High-resolution contemporary architectural glass commercial office */
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* Darkening overlay so white text remains accessible and readable */
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.65); /* Deep slate tint */
+  z-index: 1;
+}
+
+/* Ensure content sits above the tint overlay */
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphism translucent cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  padding: 2.5rem;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* Mobile safeguard: iOS Safari does not support background-attachment: fixed smoothly */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+    padding: 3.5rem 0;
+  }
 }
