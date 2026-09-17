@@ -640,3 +640,15 @@ h3 {
     padding: 3.5rem 0;
   }
 }
+
+/* Compact Parallax Header for Sub-pages */
+.parallax-hero-compact {
+  padding: 3.5rem 0;
+}
+
+.parallax-hero-compact .glass-panel {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  text-align: center;
+}
